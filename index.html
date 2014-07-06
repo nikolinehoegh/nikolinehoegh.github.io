@@ -21,7 +21,7 @@
       -webkit-font-smoothing: antialiased;
       font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #232525;
-      padding-top:70px;
+      padding-top:20px;
     }
 
     #slides {
@@ -159,16 +159,30 @@
 
     /* For smaller displays like laptops */
     @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px
+      body {
+        padding-left: 60px;
+        padding-right: 60px;
       }
+      .container {
+        width: auto
+      }
+      /*.container {
+        width: 724px
+      }*/
     }
 
     /* For larger displays */
     @media (min-width: 1200px) {
-      .container {
-        width: 1700px
+      body {
+        padding-left: 60px;
+        padding-right: 60px;
       }
+      .container {
+        width: auto
+      }
+      /*.container {
+        width: 1700px
+      }*/
     }
   </style>
   <!-- SlidesJS Required: -->
@@ -214,6 +228,16 @@
         },
 
         navigation: {
+          active: true,
+            // [boolean] Generates next and previous buttons.
+            // You can set to false and use your own buttons.
+            // User defined buttons must have the following:
+            // previous button: class="slidesjs-previous slidesjs-navigation"
+            // next button: class="slidesjs-next slidesjs-navigation" 
+          effect: "fade"
+            // [string] Can be either "slide" or "fade".
+        },
+        pagination: {
           active: true,
             // [boolean] Generates next and previous buttons.
             // You can set to false and use your own buttons.
